@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "549344920444",
+    "project_id": "mobilecomputing-94bb8",
+    "storage_bucket": "mobilecomputing-94bb8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549344920444:android:37e7b0202f1831f5765af9",
+        "android_client_info": {
+          "package_name": "com.example.apartmentbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549344920444-stib7ir7gvje57foi5b2k8ggtesuqh8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjsdHAhE2uKybYVd4qa36yrV7SwEDB-L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549344920444-stib7ir7gvje57foi5b2k8ggtesuqh8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="100dp"
+    android:background="#74000000"
+    tools:context=".fragments.PostAdvertisementOptions">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/light_gray"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/apartments"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_gray"
+            android:text="Apartments" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            app:dividerColor="@color/white" />
+
+        <Button
+            android:id="@+id/items"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/light_gray"
+            android:text="Items" />
+
+    </LinearLayout>
+</FrameLayout>

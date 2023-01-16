@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_white_24"
+        android:title="Home Page"
+        app:showAsAction="always"
+        tools:ignore="AppCompatResource">
+    </item>
+
+    <item
+        android:id="@+id/pending_tickets"
+        android:enabled="true"
+        android:title="Pending tickets" />
+
+</menu>

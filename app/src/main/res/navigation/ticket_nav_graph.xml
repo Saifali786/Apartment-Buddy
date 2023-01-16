@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ticket_nav_graph"
+    app:startDestination="@id/ticket">
+    <fragment
+        android:id="@+id/ticket"
+        android:name="com.example.apartmentbuddy.fragments.Ticket"
+        android:label="fragment_ticket"
+        tools:layout="@layout/fragment_ticket" >
+        <action
+            android:id="@+id/action_ticket_to_pendingTickets"
+            app:destination="@id/pendingTickets" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingTickets"
+        android:name="com.example.apartmentbuddy.fragments.PendingTickets"
+        android:label="fragment_pending_tickets"
+        tools:layout="@layout/fragment_pending_tickets" >
+        <action
+            android:id="@+id/action_pendingTickets_to_ticket"
+            app:destination="@id/ticket" />
+    </fragment>
+</navigation>

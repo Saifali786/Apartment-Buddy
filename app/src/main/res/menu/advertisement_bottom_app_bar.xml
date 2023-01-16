@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/adv_home"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_home_24"
+        android:title="Ads" />
+
+    <item
+        android:id="@+id/adv_myPosts"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_photo_library_24"
+        android:title="My Posts" />
+
+    <item
+        android:id="@+id/adv_bookmark"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_bookmarks_24"
+        android:title="Saved" />
+
+<!--    <item-->
+<!--        android:id="@+id/adv_newPost"-->
+<!--        android:enabled="true"-->
+<!--        android:icon="@drawable/ic_baseline_post_add_24"-->
+<!--        android:title="Post" />-->
+</menu>

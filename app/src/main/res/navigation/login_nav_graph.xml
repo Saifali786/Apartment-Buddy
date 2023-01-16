@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_nav_graph"
+    app:startDestination="@id/login">
+
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.apartmentbuddy.fragments.LoginFragment"
+        android:label="fragment_login2"
+        tools:layout="@layout/fragment_login2" >
+        <action
+            android:id="@+id/action_login_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_login_to_registration"
+            app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_login_to_forgetPassword"
+            app:destination="@id/forgetPassword" />
+        <action
+            android:id="@+id/action_login_to_homeAdmin"
+            app:destination="@id/homeAdmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.apartmentbuddy.fragments.Registration"
+        android:label="fragment_registration2"
+        tools:layout="@layout/fragment_registration2" >
+        <action
+            android:id="@+id/action_registration_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.apartmentbuddy.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_home2_to_updateProfile"
+            app:destination="@id/updateProfile" />
+        <action
+            android:id="@+id/action_home2_to_navigation2"
+            app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_home2_to_navigation4"
+            app:destination="@id/navigation4" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassword"
+        android:name="com.example.apartmentbuddy.fragments.ForgetPassword"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forgetPassword_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfile"
+        android:name="com.example.apartmentbuddy.fragments.UpdateProfile"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" >
+        <action
+            android:id="@+id/action_updateProfile_to_home2"
+            app:destination="@id/home2" />
+        <action
+            android:id="@+id/action_updateProfile_to_homeAdmin"
+            app:destination="@id/homeAdmin" />
+    </fragment>
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/appointment_nav_graph">
+        <include app:graph="@navigation/appointment_nav_graph" />
+        <action
+            android:id="@+id/action_global_home22"
+            app:destination="@id/home2" />
+    </navigation>
+
+    <fragment
+        android:id="@+id/homeAdmin"
+        android:name="com.example.apartmentbuddy.fragments.HomeAdmin"
+        android:label="fragment_home_admin"
+        tools:layout="@layout/fragment_home_admin" >
+        <action
+            android:id="@+id/action_homeAdmin_to_updateProfile"
+            app:destination="@id/updateProfile" />
+        <action
+            android:id="@+id/action_homeAdmin_to_navigation"
+            app:destination="@id/navigation" />
+        <action
+            android:id="@+id/action_homeAdmin_to_ticket_nav_graph"
+            app:destination="@id/navigation3" />
+        <action
+            android:id="@+id/action_homeAdmin_to_login"
+            app:destination="@id/login" />
+    </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/nav_graph">
+        <include app:graph="@navigation/nav_graph" />
+        <action
+            android:id="@+id/action_global_homeAdmin"
+            app:destination="@id/homeAdmin" />
+    </navigation>
+    <navigation android:id="@+id/navigation3"
+        app:startDestination="@id/ticket_nav_graph">
+        <include app:graph="@navigation/ticket_nav_graph" />
+        <action
+            android:id="@+id/action_global_homeAdmin2"
+            app:destination="@id/homeAdmin" />
+    </navigation>
+    <navigation android:id="@+id/navigation4"
+        app:startDestination="@id/complain_nav_graph">
+        <include app:graph="@navigation/complain_nav_graph" />
+        <action
+            android:id="@+id/action_global_home2"
+            app:destination="@id/home2" />
+    </navigation>
+</navigation>

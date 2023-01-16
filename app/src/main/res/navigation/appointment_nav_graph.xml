@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appointment_nav_graph"
+    app:startDestination="@id/appointment_home">
+
+    <fragment
+        android:id="@+id/appointment_home"
+        android:name="com.example.apartmentbuddy.fragments.AppointmentHome"
+        android:label="fragment_appointment_home"
+        tools:layout="@layout/fragment_appointment_home" >
+        <action
+            android:id="@+id/action_appointment_home_to_newAppointment"
+            app:destination="@id/newAppointment" />
+        <action
+            android:id="@+id/action_appointment_home_to_showAppointment"
+            app:destination="@id/showAppointment" />
+        <action
+            android:id="@+id/action_appointment_home_to_cancelAppointment"
+            app:destination="@id/cancelAppointment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newAppointment"
+        android:name="com.example.apartmentbuddy.fragments.NewAppointment"
+        android:label="fragment_new_appointment"
+        tools:layout="@layout/fragment_new_appointment" >
+        <action
+            android:id="@+id/action_newAppointment_to_appointment_home"
+            app:destination="@id/appointment_home" />
+        <action
+            android:id="@+id/action_newAppointment_to_appointmentNotes"
+            app:destination="@id/appointmentNotes" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmAppointment"
+        android:name="com.example.apartmentbuddy.fragments.ConfirmAppointment"
+        android:label="fragment_confirm_appointment"
+        tools:layout="@layout/fragment_confirm_appointment" >
+        <action
+            android:id="@+id/action_confirmAppointment_to_appointment_home"
+            app:destination="@id/appointment_home" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+        <argument android:name="user_id"
+            app:argType="string" />
+        <argument
+            android:name="notes"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAppointment"
+        android:name="com.example.apartmentbuddy.fragments.ShowAppointment"
+        android:label="fragment_show_appointment"
+        tools:layout="@layout/fragment_show_appointment" >
+        <action
+            android:id="@+id/action_showAppointment_to_appointment_home"
+            app:destination="@id/appointment_home" />
+        <action
+            android:id="@+id/action_showAppointment_to_showAppointmentDetail"
+            app:destination="@id/showAppointmentDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancelAppointment"
+        android:name="com.example.apartmentbuddy.fragments.CancelAppointment"
+        android:label="fragment_cancel_appointment"
+        tools:layout="@layout/fragment_cancel_appointment" >
+        <action
+            android:id="@+id/action_cancelAppointment_to_appointment_home"
+            app:destination="@id/appointment_home" />
+        <action
+            android:id="@+id/action_cancelAppointment_to_showAppointmentDetail"
+            app:destination="@id/showAppointmentDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/appointmentNotes"
+        android:name="com.example.apartmentbuddy.fragments.AppointmentNotes"
+        android:label="fragment_appointment_notes"
+        tools:layout="@layout/fragment_appointment_notes" >
+        <action
+            android:id="@+id/action_appointmentNotes_to_confirmAppointment"
+            app:destination="@id/confirmAppointment" />
+        <action
+            android:id="@+id/action_appointmentNotes_to_newAppointment"
+            app:destination="@id/newAppointment" />
+        <argument
+            android:name="date"
+            app:argType="string" />
+        <argument
+            android:name="time"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_appointmentNotes_to_appointment_home"
+            app:destination="@id/appointment_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/showAppointmentDetail"
+        android:name="com.example.apartmentbuddy.fragments.ShowAppointmentDetail"
+        android:label="fragment_show_appointment_detail"
+        tools:layout="@layout/fragment_show_appointment_detail" >
+        <action
+            android:id="@+id/action_showAppointmentDetail_to_showAppointment"
+            app:destination="@id/showAppointment" />
+        <action
+            android:id="@+id/action_showAppointmentDetail_to_appointment_home"
+            app:destination="@id/appointment_home" />
+        <argument
+            android:name="appointmentId"
+            app:argType="string" />
+        <argument
+            android:name="appointmentName"
+            app:argType="string" />
+        <argument
+            android:name="appointmentUserId"
+            app:argType="string" />
+        <argument
+            android:name="appointmentDate"
+            app:argType="string" />
+        <argument
+            android:name="appointmentTime"
+            app:argType="string" />
+        <argument
+            android:name="appointmentLocation"
+            app:argType="string" />
+        <argument android:name="previousOperation"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_showAppointmentDetail_to_cancelAppointment"
+            app:destination="@id/cancelAppointment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/advertisement_nav_graph"
+    app:startDestination="@id/advertisementHomeFragment">
+
+    <fragment
+        android:id="@+id/postApartmentFragment"
+        android:name="com.example.apartmentbuddy.fragments.PostApartmentFragment"
+        android:label="PostApartmentFragment"
+        tools:layout="@layout/fragment_post_apartment" >
+        <action
+            android:id="@+id/action_postApartmentFragment_to_advertisementHomeFragment"
+            app:destination="@id/advertisementHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/advertisementHomeFragment"
+        android:name="com.example.apartmentbuddy.fragments.AdvertisementDisplayFragment"
+        android:label="fragment_advertisement_home"
+        tools:layout="@layout/fragment_advertisement_home" >
+        <action
+            android:id="@+id/action_advertisementHomeFragment_to_postAdvertisementOptions"
+            app:destination="@id/postApartmentFragment" />
+        <action
+            android:id="@+id/action_advertisementHomeFragment_to_postItemFragment"
+            app:destination="@id/postItemFragment" />
+        <action
+            android:id="@+id/action_advertisementHomeFragment_to_home3"
+            app:destination="@id/home3" />
+    </fragment>
+    <fragment
+        android:id="@+id/postItemFragment"
+        android:name="com.example.apartmentbuddy.fragments.PostItemFragment"
+        android:label="PostItemFragment"
+        tools:layout="@layout/fragment_post_item" >
+        <action
+            android:id="@+id/action_postItemFragment_to_advertisementHomeFragment"
+            app:destination="@id/advertisementHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/home3"
+        android:name="com.example.apartmentbuddy.fragments.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+</navigation>
